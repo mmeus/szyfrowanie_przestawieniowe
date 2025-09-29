@@ -4,10 +4,12 @@ def rozm_tab(d):
         i += 1
     return i
 
-sz = 'BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_'
+#Deszyfr
+
+'''sz = 'BTLLTU_ĘL_EOYPM_ĄPJZLCYNDREOKYLI_ZMFO_ĄGJY_Ó_N_DEWFWGISYSII_ŁEI_'
 d = len(sz)
-n = rozm_tab(d)
-tab = [[''] * n] * n
+n = rozm_tab(d)'''
+'''tab = [[''] * n] * n
 
 i_sz = 0
 
@@ -16,4 +18,22 @@ for k in range(n):
         tab[w][k] = sz[i_sz]
         i_sz += 1
 
-print(tab)
+print(tab)'''
+
+#sposób bez dodatkowej tablicy
+'''for i in range(n):
+    for j in range(i, n ** 2, n):
+        print(sz[j], end = '')'''
+
+#Szyfr
+
+tj = 'BLĄD_JEST_PRZYWILEJEM_FILOZOFÓW_TYLKO_GŁUPCY_NIE_MYLĄ_SIĘ_NIGDY'
+d = len(tj)
+n = rozm_tab(d)
+
+while len(tj) < n ** 2:
+    tj = tj + '_'
+
+for i in range(n):
+    for j in range(i, n ** 2, n):
+        print(tj[j], end = '')
